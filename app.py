@@ -7,9 +7,9 @@ import pandas as pd
 import numpy as np
 import pickle
 
-final_rf_model = pickle.load(open('C:/Users/91739/Desktop/ads_smart/Flask/Flask/model.pkl','rb'))
-encoder=pickle.load(open('C:/Users/91739/Desktop/ads_smart/Flask/Flask/encoder.pkl','rb'))
-df = pd.read_csv('C:/Users/91739/Desktop/ads_smart/Flask/Flask/Training.csv')
+final_rf_model = pickle.load(open('C:/Users/91739/Desktop/ads_smart/smartbridge_project/Flask/Flask/model.pkl','rb'))
+encoder=pickle.load(open('C:/Users/91739/Desktop/ads_smart/smartbridge_project/Flask/Flask/encoder.pkl','rb'))
+df = pd.read_csv('C:/Users/91739/Desktop/ads_smart/smartbridge_project/Flask/Flask/Training.csv')
 
 app = Flask(__name__)
 
@@ -19,7 +19,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict(): 
-    X=pd.read_csv("C:/Users/91739/Desktop/ads_smart/Flask/Flask/X.csv")
+    X=pd.read_csv("C:/Users/91739/Desktop/ads_smart/smartbridge_project/Flask/Flask/X.csv")
     symptoms = X.columns.values
 
 
